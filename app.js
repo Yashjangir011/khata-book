@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const path = require("path")
 const fs = require("fs")
+const port = 3000
 app.set("view engine", "ejs")
 app.use(express.static(path.join(__dirname , "public")))
 app.use(express.json())
@@ -17,4 +18,9 @@ app.get('/create' , (req , res) => {
    })
 })
 
-app.listen(3000)
+app.listen(port,function (){
+    console.log(`server is running on port ${port}`)
+})
+
+
+
