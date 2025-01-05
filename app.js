@@ -18,7 +18,7 @@ app.get('/create' , (req , res) => {
    })
 })
 
-app.listen(port,function (){
+app.listen(env.sample.PORT || 3000,function (){
     console.log(`server is running on port ${port}`)
 })
 
